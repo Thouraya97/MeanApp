@@ -1,0 +1,45 @@
+
+<app-navbaradmin></app-navbaradmin>
+<div class="container">
+  
+
+<router-outlet></router-outlet>
+
+</div>
+<form (submit)="Formation()"class="form-horizontal" >
+
+    <h2>Ajouter Formation</h2>
+  
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Name</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" [(ngModel)]="name" name="name">
+        </div>
+      </div>
+    
+
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Owner</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control"[(ngModel)]="owner" name="owner">
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Done</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" [(ngModel)]="done" name="done">
+      </div>
+    </div>
+    
+    
+    
+    
+      
+      <div class="form-group">
+        <div class="pull-right">
+          <button type="submit" class="btn btn-dark" style="background-color:purple;">Ajouter</button>
+        </div>
+      </div>
+    
+</form>

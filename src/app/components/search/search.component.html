@@ -1,0 +1,27 @@
+<p>search works!</p>
+<form class="form-inline"  >
+    <div class="md-form my-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="searchCriteria" name ="searchCriteria">
+      <button type="submit" class="btn btn-light mb-2" (click)="getformation()" style="background-color: lightpink;" >search</button>
+
+    </div>
+  </form>
+
+  <table class="table table-bordered" *ngIf="Form.length > 0">
+    <thead class="table-success" style="background-color: lightpink">
+      <tr>
+       
+        <th scope="col">Titre</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let form of Form; let i = index">
+     
+    <td>{{form.name}}</td>        <td> {{form.owner}}</td>
+
+     
+  </tr>
+</tbody>
+</table>
+  <router-outlet></router-outlet>
